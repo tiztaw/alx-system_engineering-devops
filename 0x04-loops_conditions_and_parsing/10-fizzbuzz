@@ -1,19 +1,15 @@
 #!/usr/bin/env bash
-# Displays School 10 times.
-COUNTER=1
-while [ $COUNTER -lt 101 ]
+# FizzBuzz!!
+
+for i in $(seq 1 100);
 do
-    if [ $((COUNTER%15)) = 0 ]
-    then
-        echo "FizzBuzz"
-    elif [ $((COUNTER%3)) = 0 ]
-    then
-        echo "Fizz"
-    elif [ $((COUNTER%5)) = 0 ]
-    then
-        echo "Buzz"
+    if [ $((i % 15)) -eq 0 ]; then
+	echo "FizzBuzz"
+    elif [ $((i % 3)) -eq 0 ]; then
+	echo "Fizz"
+    elif [ $((i % 5)) -eq 0 ]; then
+	echo "Buzz"
     else
-        echo "$COUNTER"
+	echo "$i"
     fi
-    let COUNTER+=1
 done
